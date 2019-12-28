@@ -753,8 +753,9 @@ BKP8R	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  __IO uint32_t BKP8R;   \/*!< RTC back
 BKP9R	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  __IO uint32_t BKP9R;   \/*!< RTC backup register 9,                                    Address offset: 0x74 *\/$/;"	m	struct:__anon44
 BKPSRAM_BASE	stm_spl/CMSIS/ST/inc/stm32f4xx.h	2051;"	d
 BKPSRAM_BB_BASE	stm_spl/CMSIS/ST/inc/stm32f4xx.h	2078;"	d
-BLINK_MUL_FAST	projects/task_1_gpio_basics/main.c	/^  BLINK_MUL_FAST = 1,$/;"	e	enum:blink_mul_e	file:
-BLINK_MUL_LONG	projects/task_1_gpio_basics/main.c	/^  BLINK_MUL_LONG = 3,$/;"	e	enum:blink_mul_e	file:
+BLINK_MUL_FAST	projects/task_1_gpio_basics/main.c	/^   BLINK_MUL_FAST = 1,$/;"	e	enum:blink_mul_e	file:
+BLINK_MUL_LONG	projects/task_1_gpio_basics/main.c	/^   BLINK_MUL_LONG = 3,$/;"	e	enum:blink_mul_e	file:
+BLUE	projects/task_2_timers_basics/main.c	8;"	d	file:
 BPCR	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  __IO uint32_t BPCR;          \/*!< LTDC Back Porch Configuration Register,              Address offset: 0x0C *\/$/;"	m	struct:__anon40
 BRE_BitNumber	stm_spl/STM32F4xx/src/stm32f4xx_pwr.c	124;"	d	file:
 BROADCAST_ADDRESS	stm_spl/STM32F4xx/src/stm32f4xx_cec.c	107;"	d	file:
@@ -763,8 +764,8 @@ BSCKSEL_BIT_NUMBER	stm_spl/STM32F4xx/src/stm32f4xx_syscfg.c	87;"	d	file:
 BSRRH	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  __IO uint16_t BSRRH;    \/*!< GPIO port bit set\/reset high register, Address offset: 0x1A      *\/$/;"	m	struct:__anon35
 BSRRL	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  __IO uint16_t BSRRL;    \/*!< GPIO port bit set\/reset low register,  Address offset: 0x18      *\/$/;"	m	struct:__anon35
 BTATimeout	stm_spl/STM32F4xx/inc/stm32f4xx_dsi.h	/^  uint32_t BTATimeout;                   \/*!< BTA time-out                                             *\/$/;"	m	struct:__anon243
-BTCR	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  __IO uint32_t BTCR[8];    \/*!< NOR\/PSRAM chip-select control register(BCR) and chip-select timing register(BTR), Address offset: 0x00-1C *\/   $/;"	m	struct:__anon24
-BTCR	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  __IO uint32_t BTCR[8];    \/*!< NOR\/PSRAM chip-select control register(BCR) and chip-select timing register(BTR), Address offset: 0x00-1C *\/   $/;"	m	struct:__anon29
+BTCR	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  __IO uint32_t BTCR[8];    \/*!< NOR\/PSRAM chip-select control register(BCR) and chip-select timing register(BTR), Address offset: 0x00-1C *\/$/;"	m	struct:__anon24
+BTCR	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  __IO uint32_t BTCR[8];    \/*!< NOR\/PSRAM chip-select control register(BCR) and chip-select timing register(BTR), Address offset: 0x00-1C *\/$/;"	m	struct:__anon29
 BTR	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  __IO uint32_t              BTR;                 \/*!< CAN bit timing register,             Address offset: 0x1C          *\/$/;"	m	struct:__anon9
 BUILD_ROOT	Makefile	/^BUILD_ROOT := $(dir $(abspath $(lastword $(MAKEFILE_LIST))))$/;"	m
 BUILD_ROOT	common/Makefile	/^BUILD_ROOT = ..$/;"	m
@@ -2465,7 +2466,7 @@ CR1	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  __IO uint16_t CR1;        \/*!< SPI con
 CR1	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  __IO uint16_t CR1;        \/*!< USART Control register 1,                Address offset: 0x0C *\/$/;"	m	struct:__anon53
 CR1	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  __IO uint32_t CR1;      \/*!< FMPI2C Control register 1,            Address offset: 0x00 *\/$/;"	m	struct:__anon38
 CR1	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  __IO uint32_t CR1;      \/*!< SAI block x configuration register 1,     Address offset: 0x04 *\/$/;"	m	struct:__anon46
-CR1	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  __IO uint32_t CR1;    \/*!< ADC control register 1,                      Address offset: 0x04 *\/      $/;"	m	struct:__anon4
+CR1	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  __IO uint32_t CR1;    \/*!< ADC control register 1,                      Address offset: 0x04 *\/$/;"	m	struct:__anon4
 CR1_AWDCH_RESET	stm_spl/STM32F4xx/src/stm32f4xx_adc.c	125;"	d	file:
 CR1_AWDMode_RESET	stm_spl/STM32F4xx/src/stm32f4xx_adc.c	128;"	d	file:
 CR1_CLEAR_MASK	stm_spl/STM32F4xx/src/stm32f4xx_adc.c	131;"	d	file:
@@ -2738,6 +2739,9 @@ ClockLaneLP2HSTime	stm_spl/STM32F4xx/inc/stm32f4xx_dsi.h	/^  uint32_t ClockLaneL
 ColorCoding	stm_spl/STM32F4xx/inc/stm32f4xx_dsi.h	/^  uint32_t ColorCoding;                  \/*!< Color coding for LTDC interface$/;"	m	struct:__anon239
 ColorCoding	stm_spl/STM32F4xx/inc/stm32f4xx_dsi.h	/^  uint32_t ColorCoding;           \/*!< Color coding for LTDC interface$/;"	m	struct:__anon240
 CommandSize	stm_spl/STM32F4xx/inc/stm32f4xx_dsi.h	/^  uint32_t CommandSize;           \/*!< Maximum allowed size for an LTDC write memory command, measured in $/;"	m	struct:__anon240
+Configure_buttons	projects/task_2_timers_basics/main.c	/^static int Configure_buttons(void)$/;"	f	file:
+Configure_leds	projects/task_2_timers_basics/main.c	/^static int Configure_leds(void)$/;"	f	file:
+Configure_timers	projects/task_2_timers_basics/main.c	/^static int Configure_timers(void)$/;"	f	file:
 CopyDataInit	common/as/startup_stm32f40_41xxx.S	/^CopyDataInit:$/;"	l
 CoreDebug	stm_spl/CMSIS/inc/core_cm3.h	1309;"	d
 CoreDebug	stm_spl/CMSIS/inc/core_cm4.h	1469;"	d
@@ -7084,7 +7088,7 @@ FMC_Bank1_NORSRAM3	stm_spl/STM32F4xx/inc/stm32f4xx_fmc.h	355;"	d
 FMC_Bank1_NORSRAM4	stm_spl/STM32F4xx/inc/stm32f4xx_fmc.h	356;"	d
 FMC_Bank1_R_BASE	stm_spl/CMSIS/ST/inc/stm32f4xx.h	2264;"	d
 FMC_Bank1_SDRAM	stm_spl/STM32F4xx/inc/stm32f4xx_fmc.h	389;"	d
-FMC_Bank1_TypeDef	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^} FMC_Bank1_TypeDef; $/;"	t	typeref:struct:__anon29
+FMC_Bank1_TypeDef	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^} FMC_Bank1_TypeDef;$/;"	t	typeref:struct:__anon29
 FMC_Bank2	stm_spl/CMSIS/ST/inc/stm32f4xx.h	2436;"	d
 FMC_Bank2_NAND	stm_spl/STM32F4xx/inc/stm32f4xx_fmc.h	369;"	d
 FMC_Bank2_R_BASE	stm_spl/CMSIS/ST/inc/stm32f4xx.h	2266;"	d
@@ -7097,10 +7101,10 @@ FMC_Bank3_TypeDef	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^} FMC_Bank3_TypeDef;$/;"	t	
 FMC_Bank4	stm_spl/CMSIS/ST/inc/stm32f4xx.h	2438;"	d
 FMC_Bank4_PCCARD	stm_spl/STM32F4xx/inc/stm32f4xx_fmc.h	381;"	d
 FMC_Bank4_R_BASE	stm_spl/CMSIS/ST/inc/stm32f4xx.h	2268;"	d
-FMC_Bank4_TypeDef	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^} FMC_Bank4_TypeDef; $/;"	t	typeref:struct:__anon33
+FMC_Bank4_TypeDef	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^} FMC_Bank4_TypeDef;$/;"	t	typeref:struct:__anon33
 FMC_Bank5_6	stm_spl/CMSIS/ST/inc/stm32f4xx.h	2439;"	d
 FMC_Bank5_6_R_BASE	stm_spl/CMSIS/ST/inc/stm32f4xx.h	2269;"	d
-FMC_Bank5_6_TypeDef	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^} FMC_Bank5_6_TypeDef; $/;"	t	typeref:struct:__anon34
+FMC_Bank5_6_TypeDef	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^} FMC_Bank5_6_TypeDef;$/;"	t	typeref:struct:__anon34
 FMC_BurstAccessMode	stm_spl/STM32F4xx/inc/stm32f4xx_fmc.h	/^  uint32_t FMC_BurstAccessMode;     \/*!< Enables or disables the burst access mode for Flash memory,$/;"	m	struct:__anon277
 FMC_BurstAccessMode_Disable	stm_spl/STM32F4xx/inc/stm32f4xx_fmc.h	451;"	d
 FMC_BurstAccessMode_Enable	stm_spl/STM32F4xx/inc/stm32f4xx_fmc.h	452;"	d
@@ -8380,7 +8384,7 @@ FSMC_Bank1_NORSRAM2	stm_spl/STM32F4xx/inc/stm32f4xx_fsmc.h	248;"	d
 FSMC_Bank1_NORSRAM3	stm_spl/STM32F4xx/inc/stm32f4xx_fsmc.h	249;"	d
 FSMC_Bank1_NORSRAM4	stm_spl/STM32F4xx/inc/stm32f4xx_fsmc.h	250;"	d
 FSMC_Bank1_R_BASE	stm_spl/CMSIS/ST/inc/stm32f4xx.h	2255;"	d
-FSMC_Bank1_TypeDef	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^} FSMC_Bank1_TypeDef; $/;"	t	typeref:struct:__anon24
+FSMC_Bank1_TypeDef	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^} FSMC_Bank1_TypeDef;$/;"	t	typeref:struct:__anon24
 FSMC_Bank2	stm_spl/CMSIS/ST/inc/stm32f4xx.h	2428;"	d
 FSMC_Bank2_NAND	stm_spl/STM32F4xx/inc/stm32f4xx_fsmc.h	258;"	d
 FSMC_Bank2_R_BASE	stm_spl/CMSIS/ST/inc/stm32f4xx.h	2257;"	d
@@ -8392,7 +8396,7 @@ FSMC_Bank3_TypeDef	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^} FSMC_Bank3_TypeDef;$/;"	
 FSMC_Bank4	stm_spl/CMSIS/ST/inc/stm32f4xx.h	2430;"	d
 FSMC_Bank4_PCCARD	stm_spl/STM32F4xx/inc/stm32f4xx_fsmc.h	267;"	d
 FSMC_Bank4_R_BASE	stm_spl/CMSIS/ST/inc/stm32f4xx.h	2259;"	d
-FSMC_Bank4_TypeDef	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^} FSMC_Bank4_TypeDef; $/;"	t	typeref:struct:__anon28
+FSMC_Bank4_TypeDef	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^} FSMC_Bank4_TypeDef;$/;"	t	typeref:struct:__anon28
 FSMC_BurstAccessMode	stm_spl/STM32F4xx/inc/stm32f4xx_fsmc.h	/^  uint32_t FSMC_BurstAccessMode;     \/*!< Enables or disables the burst access mode for Flash memory,$/;"	m	struct:__anon233
 FSMC_BurstAccessMode_Disable	stm_spl/STM32F4xx/inc/stm32f4xx_fsmc.h	334;"	d
 FSMC_BurstAccessMode_Enable	stm_spl/STM32F4xx/inc/stm32f4xx_fsmc.h	335;"	d
@@ -9311,6 +9315,7 @@ GPIO_TypeDef	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^} GPIO_TypeDef;$/;"	t	typeref:st
 GPIO_Write	stm_spl/STM32F4xx/src/stm32f4xx_gpio.c	/^void GPIO_Write(GPIO_TypeDef* GPIOx, uint16_t PortVal)$/;"	f
 GPIO_WriteBit	stm_spl/STM32F4xx/src/stm32f4xx_gpio.c	/^void GPIO_WriteBit(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin, BitAction BitVal)$/;"	f
 GPSR	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  __IO uint32_t GPSR;           \/*!< DSI Host Generic Packet Status Register,                   Address offset: 0x74       *\/$/;"	m	struct:__anon20
+GREEN	projects/task_2_timers_basics/main.c	6;"	d	file:
 GTPR	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  __IO uint16_t GTPR;       \/*!< USART Guard time and prescaler register, Address offset: 0x18 *\/$/;"	m	struct:__anon53
 GVCIDR	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  __IO uint32_t GVCIDR;         \/*!< DSI Host Generic VCID Register,                            Address offset: 0x30       *\/$/;"	m	struct:__anon20
 HASH	stm_spl/CMSIS/ST/inc/stm32f4xx.h	2421;"	d
@@ -9411,7 +9416,7 @@ HISR	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  __IO uint32_t HISR;   \/*!< DMA high i
 HMAC_MD5	stm_spl/STM32F4xx/src/stm32f4xx_hash_md5.c	/^ErrorStatus HMAC_MD5(uint8_t *Key, uint32_t Keylen, uint8_t *Input, $/;"	f
 HMAC_SHA1	stm_spl/STM32F4xx/src/stm32f4xx_hash_sha1.c	/^ErrorStatus HMAC_SHA1(uint8_t *Key, uint32_t Keylen, uint8_t *Input,$/;"	f
 HR	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  __IO uint32_t HR[5];            \/*!< HASH digest registers,          Address offset: 0x0C-0x1C   *\/$/;"	m	struct:__anon56
-HR	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  __IO uint32_t HR[8];     \/*!< HASH digest registers,          Address offset: 0x310-0x32C *\/ $/;"	m	struct:__anon57
+HR	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  __IO uint32_t HR[8];     \/*!< HASH digest registers,          Address offset: 0x310-0x32C *\/$/;"	m	struct:__anon57
 HSE_STARTUP_TIMEOUT	stm_spl/CMSIS/ST/inc/stm32f4xx.h	156;"	d
 HSE_VALUE	stm_spl/CMSIS/ST/inc/stm32f4xx.h	144;"	d
 HSE_VALUE	stm_spl/CMSIS/ST/inc/stm32f4xx.h	148;"	d
@@ -9434,7 +9439,6 @@ I2C1_ER_IRQn	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  I2C1_ER_IRQn                = 
 I2C1_EV_IRQn	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  I2C1_EV_IRQn                = 31,     \/*!< I2C1 Event Interrupt                                              *\/$/;"	e	enum:IRQn
 I2C2	stm_spl/CMSIS/ST/inc/stm32f4xx.h	2309;"	d
 I2C2_BASE	stm_spl/CMSIS/ST/inc/stm32f4xx.h	2119;"	d
-I2C2_ER_IRQn	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  I2C2_ER_IRQn                = 34,     \/*!< I2C2 Error Interrupt                                              *\/  $/;"	e	enum:IRQn
 I2C2_ER_IRQn	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  I2C2_ER_IRQn                = 34,     \/*!< I2C2 Error Interrupt                                              *\/$/;"	e	enum:IRQn
 I2C2_EV_IRQn	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  I2C2_EV_IRQn                = 33,     \/*!< I2C2 Event Interrupt                                              *\/$/;"	e	enum:IRQn
 I2C3	stm_spl/CMSIS/ST/inc/stm32f4xx.h	2310;"	d
@@ -10946,9 +10950,9 @@ LAR	stm_spl/CMSIS/inc/core_cm7.h	/^  __O  uint32_t LAR;                     \/*!
 LAR	stm_spl/CMSIS/inc/core_cm7.h	/^  __O  uint32_t LAR;                     \/*!< Offset: 0xFB0 ( \/W)  ITM Lock Access Register                  *\/$/;"	m	struct:__anon84
 LAR	stm_spl/CMSIS/inc/core_sc300.h	/^  __O  uint32_t LAR;                     \/*!< Offset: 0xFB0 ( \/W)  ITM Lock Access Register                  *\/$/;"	m	struct:__anon132
 LCCCR	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  __IO uint32_t LCCCR;          \/*!< DSI Host LTDC Current Color Coding Register,               Address offset: 0x110      *\/$/;"	m	struct:__anon20
-LCCR	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  __IO uint32_t LCCR;           \/*!< DSI Host LTDC Command Configuration Register,              Address offset: 0x64       *\/ $/;"	m	struct:__anon20
+LCCR	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  __IO uint32_t LCCR;           \/*!< DSI Host LTDC Command Configuration Register,              Address offset: 0x64       *\/$/;"	m	struct:__anon20
 LCKR	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  __IO uint32_t LCKR;     \/*!< GPIO port configuration lock register, Address offset: 0x1C      *\/$/;"	m	struct:__anon35
-LCOLCR	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  __IO uint32_t LCOLCR;         \/*!< DSI Host LTDC Color Coding Register,                       Address offset: 0x10       *\/ $/;"	m	struct:__anon20
+LCOLCR	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  __IO uint32_t LCOLCR;         \/*!< DSI Host LTDC Color Coding Register,                       Address offset: 0x10       *\/$/;"	m	struct:__anon20
 LCVCIDR	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  __IO uint32_t LCVCIDR;        \/*!< DSI Host LTDC Current VCID Register,                       Address offset: 0x10C      *\/$/;"	m	struct:__anon20
 LD	common_defs.mk	/^LD        := $(PREFIX)-gcc$/;"	m
 LD_SCRIPT	common_defs.mk	/^LD_SCRIPT  = $(BUILD_ROOT)\/common\/ld\/stm32f4xx_flash.ld$/;"	m
@@ -11371,7 +11375,7 @@ LTDC_TWCR_TOTALH	stm_spl/CMSIS/ST/inc/stm32f4xx.h	7525;"	d
 LTDC_TWCR_TOTALW	stm_spl/CMSIS/ST/inc/stm32f4xx.h	7526;"	d
 LTDC_TotalHeigh	stm_spl/STM32F4xx/inc/stm32f4xx_ltdc.h	/^  uint32_t LTDC_TotalHeigh;                 \/*!< configures the total height. This parameter $/;"	m	struct:__anon252
 LTDC_TotalWidth	stm_spl/STM32F4xx/inc/stm32f4xx_ltdc.h	/^  uint32_t LTDC_TotalWidth;                 \/*!< configures the total width. This parameter $/;"	m	struct:__anon252
-LTDC_TypeDef	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^} LTDC_TypeDef;  $/;"	t	typeref:struct:__anon40
+LTDC_TypeDef	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^} LTDC_TypeDef;$/;"	t	typeref:struct:__anon40
 LTDC_VBReload	stm_spl/STM32F4xx/inc/stm32f4xx_ltdc.h	284;"	d
 LTDC_VSPolarity	stm_spl/STM32F4xx/inc/stm32f4xx_ltdc.h	/^  uint32_t LTDC_VSPolarity;                 \/*!< configures the vertical synchronization polarity.$/;"	m	struct:__anon252
 LTDC_VSPolarity_AH	stm_spl/STM32F4xx/inc/stm32f4xx_ltdc.h	248;"	d
@@ -11895,6 +11899,8 @@ NVIC_VectTab_RAM	stm_spl/STM32F4xx/inc/misc.h	86;"	d
 Nby2	stm_spl/CMSIS/inc/arm_math.h	/^    uint16_t Nby2;                      \/**< half of the length of the DCT4. *\/$/;"	m	struct:__anon190
 Nby2	stm_spl/CMSIS/inc/arm_math.h	/^    uint16_t Nby2;                      \/**< half of the length of the DCT4. *\/$/;"	m	struct:__anon191
 Nby2	stm_spl/CMSIS/inc/arm_math.h	/^    uint16_t Nby2;                      \/**< half of the length of the DCT4. *\/$/;"	m	struct:__anon192
+Next_color_LED_FORWARD	projects/task_2_timers_basics/main.c	/^static void Next_color_LED_FORWARD(void)$/;"	f	file:
+Next_color_LED_REVERSE	projects/task_2_timers_basics/main.c	/^static void Next_color_LED_REVERSE(void)$/;"	f	file:
 NonMaskableInt_IRQn	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  NonMaskableInt_IRQn         = -14,    \/*!< 2 Non Maskable Interrupt                                          *\/$/;"	e	enum:IRQn
 NullPacketSize	stm_spl/STM32F4xx/inc/stm32f4xx_dsi.h	/^  uint32_t NullPacketSize;               \/*!< Null packet size                                                   *\/$/;"	m	struct:__anon239
 NumberOfChunks	stm_spl/STM32F4xx/inc/stm32f4xx_dsi.h	/^  uint32_t NumberOfChunks;               \/*!< Number of chunks                                                   *\/$/;"	m	struct:__anon239
@@ -11998,9 +12004,9 @@ OPTCR_BYTE3_ADDRESS	stm_spl/STM32F4xx/inc/stm32f4xx_flash.h	421;"	d
 OPTKEYR	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  __IO uint32_t OPTKEYR;  \/*!< FLASH option key register,       Address offset: 0x08 *\/$/;"	m	struct:__anon23
 OR	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  __IO uint16_t OR;          \/*!< TIM option register,                 Address offset: 0x50 *\/$/;"	m	struct:__anon52
 OR	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  __IO uint32_t OR;          \/*!< LPTIM Option register,                              Address offset: 0x20 *\/$/;"	m	struct:__anon59
+ORANGE	projects/task_2_timers_basics/main.c	7;"	d	file:
 OSPEEDR	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  __IO uint32_t OSPEEDR;  \/*!< GPIO port output speed register,       Address offset: 0x08      *\/$/;"	m	struct:__anon35
 OTG_FS_IRQn	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  OTG_FS_IRQn                 = 67,     \/*!< USB OTG FS global Interrupt                                       *\/$/;"	e	enum:IRQn
-OTG_FS_WKUP_IRQn	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  OTG_FS_WKUP_IRQn            = 42,     \/*!< USB OTG FS Wakeup through EXTI line interrupt                     *\/    $/;"	e	enum:IRQn
 OTG_FS_WKUP_IRQn	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  OTG_FS_WKUP_IRQn            = 42,     \/*!< USB OTG FS Wakeup through EXTI line interrupt                     *\/$/;"	e	enum:IRQn
 OTG_HS_EP1_IN_IRQn	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  OTG_HS_EP1_IN_IRQn          = 75,     \/*!< USB OTG HS End Point 1 In global interrupt                        *\/$/;"	e	enum:IRQn
 OTG_HS_EP1_OUT_IRQn	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  OTG_HS_EP1_OUT_IRQn         = 74,     \/*!< USB OTG HS End Point 1 Out global interrupt                       *\/$/;"	e	enum:IRQn
@@ -12016,8 +12022,8 @@ PATT4	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  __IO uint32_t PATT4;      \/*!< PC Ca
 PATT4	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  __IO uint32_t PATT4;      \/*!< PC Card  Attribute memory space timing register 4, Address offset: 0xAC *\/$/;"	m	struct:__anon33
 PCLK1_Frequency	stm_spl/STM32F4xx/inc/stm32f4xx_rcc.h	/^  uint32_t PCLK1_Frequency;  \/*!<  PCLK1 clock frequency expressed in Hz  *\/$/;"	m	struct:__anon290
 PCLK2_Frequency	stm_spl/STM32F4xx/inc/stm32f4xx_rcc.h	/^  uint32_t PCLK2_Frequency;  \/*!<  PCLK2 clock frequency expressed in Hz  *\/$/;"	m	struct:__anon290
-PCONFR	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  __IO uint32_t PCONFR;         \/*!< DSI Host PHY Configuration Register,                       Address offset: 0xA4       *\/ $/;"	m	struct:__anon20
-PCR	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  __IO uint32_t PCR;            \/*!< DSI Host Protocol Configuration Register,                  Address offset: 0x2C       *\/ $/;"	m	struct:__anon20
+PCONFR	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  __IO uint32_t PCONFR;         \/*!< DSI Host PHY Configuration Register,                       Address offset: 0xA4       *\/$/;"	m	struct:__anon20
+PCR	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  __IO uint32_t PCR;            \/*!< DSI Host Protocol Configuration Register,                  Address offset: 0x2C       *\/$/;"	m	struct:__anon20
 PCR2	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  __IO uint32_t PCR2;       \/*!< NAND Flash control register 2,                       Address offset: 0x60 *\/$/;"	m	struct:__anon26
 PCR2	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  __IO uint32_t PCR2;       \/*!< NAND Flash control register 2,                       Address offset: 0x60 *\/$/;"	m	struct:__anon31
 PCR3	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  __IO uint32_t PCR3;       \/*!< NAND Flash control register 3,                       Address offset: 0x80 *\/$/;"	m	struct:__anon27
@@ -12033,7 +12039,7 @@ PCSR	stm_spl/CMSIS/inc/core_cm3.h	/^  __I  uint32_t PCSR;                    \/*
 PCSR	stm_spl/CMSIS/inc/core_cm4.h	/^  __I  uint32_t PCSR;                    \/*!< Offset: 0x01C (R\/ )  Program Counter Sample Register           *\/$/;"	m	struct:__anon152
 PCSR	stm_spl/CMSIS/inc/core_cm7.h	/^  __I  uint32_t PCSR;                    \/*!< Offset: 0x01C (R\/ )  Program Counter Sample Register           *\/$/;"	m	struct:__anon86
 PCSR	stm_spl/CMSIS/inc/core_sc300.h	/^  __I  uint32_t PCSR;                    \/*!< Offset: 0x01C (R\/ )  Program Counter Sample Register           *\/$/;"	m	struct:__anon134
-PCTLR	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  __IO uint32_t PCTLR;          \/*!< DSI Host PHY Control Register,                             Address offset: 0xA0       *\/ $/;"	m	struct:__anon20
+PCTLR	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  __IO uint32_t PCTLR;          \/*!< DSI Host PHY Control Register,                             Address offset: 0xA0       *\/$/;"	m	struct:__anon20
 PECR	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  __IO uint32_t PECR;     \/*!< FMPI2C PEC register,                  Address offset: 0x20 *\/$/;"	m	struct:__anon38
 PERIPH_BASE	stm_spl/CMSIS/ST/inc/stm32f4xx.h	2050;"	d
 PERIPH_BB_BASE	stm_spl/CMSIS/ST/inc/stm32f4xx.h	2077;"	d
@@ -13440,13 +13446,14 @@ RDTR	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  __IO uint32_t RDTR; \/*!< CAN receive 
 READ_BIT	stm_spl/CMSIS/ST/inc/stm32f4xx.h	12038;"	d
 READ_REG	stm_spl/CMSIS/ST/inc/stm32f4xx.h	12044;"	d
 RECALPF_TIMEOUT	stm_spl/STM32F4xx/src/stm32f4xx_rtc.c	312;"	d	file:
+RED	projects/task_2_timers_basics/main.c	5;"	d	file:
 REPLACE_ALPHA_VALUE	stm_spl/STM32F4xx/inc/stm32f4xx_dma2d.h	357;"	d
 RESERVED	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^       uint32_t RESERVED[52];     \/*!< Reserved, 0x28-0xF4                                         *\/$/;"	m	struct:__anon56
 RESERVED	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  uint32_t      RESERVED;     \/*!< Reserved, 0x18                                                               *\/$/;"	m	struct:__anon36
 RESERVED	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  uint32_t      RESERVED[236]; \/*!< Reserved, 0x50-0x3FF *\/$/;"	m	struct:__anon19
-RESERVED	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  uint32_t      RESERVED[2];  \/*!< Reserved, 0x18-0x1C                                                          *\/ $/;"	m	struct:__anon36
-RESERVED0	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  uint16_t        RESERVED0;    \/*!< Reserved,  0x06                                          *\/  $/;"	m	struct:__anon49
-RESERVED0	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  uint16_t        RESERVED0;    \/*!< Reserved,  0x06                                          *\/  $/;"	m	struct:__anon51
+RESERVED	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  uint32_t      RESERVED[2];  \/*!< Reserved, 0x18-0x1C                                                          *\/$/;"	m	struct:__anon36
+RESERVED0	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  uint16_t        RESERVED0;    \/*!< Reserved,  0x06                                          *\/$/;"	m	struct:__anon49
+RESERVED0	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  uint16_t        RESERVED0;    \/*!< Reserved,  0x06                                          *\/$/;"	m	struct:__anon51
 RESERVED0	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  uint16_t      RESERVED0;   \/*!< Reserved, 0x02                                            *\/$/;"	m	struct:__anon52
 RESERVED0	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  uint16_t      RESERVED0;  \/*!< Reserved, 0x02                                                           *\/$/;"	m	struct:__anon48
 RESERVED0	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  uint16_t      RESERVED0;  \/*!< Reserved, 0x02                                                *\/$/;"	m	struct:__anon53
@@ -13496,8 +13503,8 @@ RESERVED0	stm_spl/CMSIS/inc/core_sc300.h	/^       uint32_t RESERVED0[24];$/;"	m	
 RESERVED0	stm_spl/CMSIS/inc/core_sc300.h	/^       uint32_t RESERVED0[2];$/;"	m	struct:__anon135
 RESERVED0	stm_spl/CMSIS/inc/core_sc300.h	/^       uint32_t RESERVED0[5];$/;"	m	struct:__anon129
 RESERVED0	stm_spl/CMSIS/inc/core_sc300.h	/^       uint32_t RESERVED0[864];$/;"	m	struct:__anon132
-RESERVED1	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  uint16_t        RESERVED1;    \/*!< Reserved,  0x0E                                          *\/   $/;"	m	struct:__anon49
-RESERVED1	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  uint16_t        RESERVED1;    \/*!< Reserved,  0x0E                                          *\/   $/;"	m	struct:__anon51
+RESERVED1	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  uint16_t        RESERVED1;    \/*!< Reserved,  0x0E                                          *\/$/;"	m	struct:__anon49
+RESERVED1	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  uint16_t        RESERVED1;    \/*!< Reserved,  0x0E                                          *\/$/;"	m	struct:__anon51
 RESERVED1	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  uint16_t      RESERVED1;   \/*!< Reserved, 0x06                                            *\/$/;"	m	struct:__anon52
 RESERVED1	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  uint16_t      RESERVED1;  \/*!< Reserved, 0x06                                                           *\/$/;"	m	struct:__anon48
 RESERVED1	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  uint16_t      RESERVED1;  \/*!< Reserved, 0x06                                                *\/$/;"	m	struct:__anon53
@@ -13536,8 +13543,8 @@ RESERVED11	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  uint16_t      RESERVED11;  \/*!<
 RESERVED12	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  uint16_t      RESERVED12;  \/*!< Reserved, 0x4A                                            *\/$/;"	m	struct:__anon52
 RESERVED13	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  uint16_t      RESERVED13;  \/*!< Reserved, 0x4E                                            *\/$/;"	m	struct:__anon52
 RESERVED14	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  uint16_t      RESERVED14;  \/*!< Reserved, 0x52                                            *\/$/;"	m	struct:__anon52
-RESERVED2	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  uint16_t        RESERVED2;    \/*!< Reserved,  0x1A                                          *\/   $/;"	m	struct:__anon49
-RESERVED2	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  uint16_t        RESERVED2;    \/*!< Reserved,  0x1A                                          *\/   $/;"	m	struct:__anon51
+RESERVED2	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  uint16_t        RESERVED2;    \/*!< Reserved,  0x1A                                          *\/$/;"	m	struct:__anon49
+RESERVED2	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  uint16_t        RESERVED2;    \/*!< Reserved,  0x1A                                          *\/$/;"	m	struct:__anon51
 RESERVED2	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  uint16_t      RESERVED2;   \/*!< Reserved, 0x0A                                            *\/$/;"	m	struct:__anon52
 RESERVED2	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  uint16_t      RESERVED2;  \/*!< Reserved, 0x0A                                                           *\/$/;"	m	struct:__anon48
 RESERVED2	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  uint16_t      RESERVED2;  \/*!< Reserved, 0x0A                                                *\/$/;"	m	struct:__anon53
@@ -13620,7 +13627,7 @@ RESERVED5	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  uint16_t      RESERVED5;   \/*!< 
 RESERVED5	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  uint16_t      RESERVED5;  \/*!< Reserved, 0x16                                                           *\/$/;"	m	struct:__anon48
 RESERVED5	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  uint16_t      RESERVED5;  \/*!< Reserved, 0x16                                                *\/$/;"	m	struct:__anon53
 RESERVED5	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  uint16_t      RESERVED5;  \/*!< Reserved, 0x16                                   *\/$/;"	m	struct:__anon37
-RESERVED5	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  uint32_t                   RESERVED5[8];        \/*!< Reserved, 0x220-0x23F                                              *\/ $/;"	m	struct:__anon9
+RESERVED5	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  uint32_t                   RESERVED5[8];        \/*!< Reserved, 0x220-0x23F                                              *\/$/;"	m	struct:__anon9
 RESERVED5	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  uint32_t      RESERVED5;      \/*!< Reserved, 0x114                                                                       *\/$/;"	m	struct:__anon20
 RESERVED5	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  uint32_t      RESERVED5[10];$/;"	m	struct:__anon21
 RESERVED5	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  uint32_t      RESERVED5[2];  \/*!< Reserved, 0x68-0x6C                                                               *\/$/;"	m	struct:__anon43
@@ -16001,7 +16008,7 @@ SVC_Handler	common/src/stm32f4xx_it.c	/^void SVC_Handler(void)$/;"	f
 SVCall_IRQn	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  SVCall_IRQn                 = -5,     \/*!< 11 Cortex-M4 SV Call Interrupt                                    *\/$/;"	e	enum:IRQn
 SWIER	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  __IO uint32_t SWIER;  \/*!< EXTI Software interrupt event register,  Address offset: 0x10 *\/$/;"	m	struct:__anon22
 SWITCH_DELAY	projects/led_test/main.c	3;"	d	file:
-SWITCH_DELAY	projects/task_1_gpio_basics/main.c	9;"	d	file:
+SWITCH_DELAY	projects/task_1_gpio_basics/main.c	10;"	d	file:
 SWTRIGR	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  __IO uint32_t SWTRIGR;  \/*!< DAC software trigger register,                           Address offset: 0x04 *\/$/;"	m	struct:__anon12
 SYNCHRO_TIMEOUT	stm_spl/STM32F4xx/src/stm32f4xx_rtc.c	311;"	d	file:
 SYSCFG	stm_spl/CMSIS/ST/inc/stm32f4xx.h	2342;"	d
@@ -16252,6 +16259,9 @@ SYSCFG_PMC_MII_RMII_SEL	stm_spl/CMSIS/ST/inc/stm32f4xx.h	10716;"	d
 SYSCFG_TypeDef	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^} SYSCFG_TypeDef;$/;"	t	typeref:struct:__anon36
 SYSCLK_Frequency	stm_spl/STM32F4xx/inc/stm32f4xx_rcc.h	/^  uint32_t SYSCLK_Frequency; \/*!<  SYSCLK clock frequency expressed in Hz *\/$/;"	m	struct:__anon290
 SetSysClock	common/src/system_stm32f4xx.c	/^static void SetSysClock(void)$/;"	f	file:
+SetSysClock_HSE_84	projects/task_1_gpio_basics/main.c	/^void SetSysClock_HSE_84(void)$/;"	f
+SetSysClock_HSE_84	projects/task_2_timers_basics/main.c	/^void SetSysClock_HSE_84(void)$/;"	f
+SetSysClock_HSI_168	projects/task_1_gpio_basics/main.c	/^void SetSysClock_HSI_168(void)$/;"	f
 Sint	stm_spl/CMSIS/inc/arm_math.h	/^    arm_cfft_instance_f32 Sint;      \/**< Internal CFFT structure. *\/$/;"	m	struct:__anon189
 StdId	stm_spl/STM32F4xx/inc/stm32f4xx_can.h	/^  uint32_t StdId;  \/*!< Specifies the standard identifier.$/;"	m	struct:__anon303
 StdId	stm_spl/STM32F4xx/inc/stm32f4xx_can.h	/^  uint32_t StdId;  \/*!< Specifies the standard identifier.$/;"	m	struct:__anon304
@@ -16440,7 +16450,7 @@ TCR	stm_spl/CMSIS/inc/core_cm7.h	/^  __IO uint32_t TCR;                     \/*!
 TCR	stm_spl/CMSIS/inc/core_sc300.h	/^  __IO uint32_t TCR;                     \/*!< Offset: 0xE80 (R\/W)  ITM Trace Control Register                *\/$/;"	m	struct:__anon132
 TC_IT_MASK	stm_spl/STM32F4xx/src/stm32f4xx_fmpi2c.c	98;"	d	file:
 TDCCR	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  __IO uint32_t TDCCR;          \/*!< DSI Host 3D Current Configuration Register,                Address offset: 0x190      *\/$/;"	m	struct:__anon20
-TDCR	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  __IO uint32_t TDCR;           \/*!< DSI Host 3D Configuration Register,                        Address offset: 0x90       *\/ $/;"	m	struct:__anon20
+TDCR	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  __IO uint32_t TDCR;           \/*!< DSI Host 3D Configuration Register,                        Address offset: 0x90       *\/$/;"	m	struct:__anon20
 TDESBUSY_TIMEOUT	stm_spl/STM32F4xx/src/stm32f4xx_cryp_tdes.c	62;"	d	file:
 TDHR	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  __IO uint32_t TDHR; \/*!< CAN mailbox data high register *\/$/;"	m	struct:__anon6
 TDLR	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  __IO uint32_t TDLR; \/*!< CAN mailbox data low register *\/$/;"	m	struct:__anon6
@@ -16951,6 +16961,8 @@ TIM_OutputNState_Enable	stm_spl/STM32F4xx/inc/stm32f4xx_tim.h	372;"	d
 TIM_OutputState	stm_spl/STM32F4xx/inc/stm32f4xx_tim.h	/^  uint16_t TIM_OutputState;   \/*!< Specifies the TIM Output Compare state.$/;"	m	struct:__anon308
 TIM_OutputState_Disable	stm_spl/STM32F4xx/inc/stm32f4xx_tim.h	359;"	d
 TIM_OutputState_Enable	stm_spl/STM32F4xx/inc/stm32f4xx_tim.h	360;"	d
+TIM_PRD	projects/task_2_timers_basics/main.c	4;"	d	file:
+TIM_PRESC	projects/task_2_timers_basics/main.c	3;"	d	file:
 TIM_PSCReloadMode_Immediate	stm_spl/STM32F4xx/inc/stm32f4xx_tim.h	756;"	d
 TIM_PSCReloadMode_Update	stm_spl/STM32F4xx/inc/stm32f4xx_tim.h	755;"	d
 TIM_PSC_PSC	stm_spl/CMSIS/ST/inc/stm32f4xx.h	11242;"	d
@@ -17363,7 +17375,7 @@ TearingEffectSource	stm_spl/STM32F4xx/inc/stm32f4xx_dsi.h	/^  uint32_t TearingEf
 TimeoutCkdiv	stm_spl/STM32F4xx/inc/stm32f4xx_dsi.h	/^  uint32_t TimeoutCkdiv;                 \/*!< Time-out clock division                                  *\/$/;"	m	struct:__anon243
 UART10	stm_spl/CMSIS/ST/inc/stm32f4xx.h	2330;"	d
 UART10_BASE	stm_spl/CMSIS/ST/inc/stm32f4xx.h	2143;"	d
-UART10_IRQn	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  UART10_IRQn                 = 89,     \/*!< UART10 global Interrupt                                           *\/  $/;"	e	enum:IRQn
+UART10_IRQn	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  UART10_IRQn                 = 89,     \/*!< UART10 global Interrupt                                           *\/$/;"	e	enum:IRQn
 UART4	stm_spl/CMSIS/ST/inc/stm32f4xx.h	2306;"	d
 UART4_BASE	stm_spl/CMSIS/ST/inc/stm32f4xx.h	2116;"	d
 UART4_IRQn	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  UART4_IRQn                  = 52,     \/*!< UART4 global Interrupt                                            *\/$/;"	e	enum:IRQn
@@ -17372,11 +17384,9 @@ UART5_BASE	stm_spl/CMSIS/ST/inc/stm32f4xx.h	2117;"	d
 UART5_IRQn	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  UART5_IRQn                  = 53,     \/*!< UART5 global Interrupt                                            *\/$/;"	e	enum:IRQn
 UART7	stm_spl/CMSIS/ST/inc/stm32f4xx.h	2327;"	d
 UART7_BASE	stm_spl/CMSIS/ST/inc/stm32f4xx.h	2134;"	d
-UART7_IRQn	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  UART7_IRQn                  = 82,     \/*!< UART7 global interrupt                                            *\/  $/;"	e	enum:IRQn
 UART7_IRQn	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  UART7_IRQn                  = 82,     \/*!< UART7 global interrupt                                            *\/$/;"	e	enum:IRQn
 UART8	stm_spl/CMSIS/ST/inc/stm32f4xx.h	2328;"	d
 UART8_BASE	stm_spl/CMSIS/ST/inc/stm32f4xx.h	2135;"	d
-UART8_IRQn	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  UART8_IRQn                  = 83,     \/*!< UART8 global interrupt                                            *\/   $/;"	e	enum:IRQn
 UART8_IRQn	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  UART8_IRQn                  = 83,     \/*!< UART8 global interrupt                                            *\/$/;"	e	enum:IRQn
 UART9	stm_spl/CMSIS/ST/inc/stm32f4xx.h	2329;"	d
 UART9_BASE	stm_spl/CMSIS/ST/inc/stm32f4xx.h	2142;"	d
@@ -17607,7 +17617,7 @@ VVBPCCR	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  __IO uint32_t VVBPCCR;        \/*!<
 VVBPCR	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  __IO uint32_t VVBPCR;         \/*!< DSI Host Video VBP Configuration Register,                 Address offset: 0x58       *\/$/;"	m	struct:__anon20
 VVFPCCR	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  __IO uint32_t VVFPCCR;        \/*!< DSI Host Video VFP Current Configuration Register,         Address offset: 0x15C      *\/$/;"	m	struct:__anon20
 VVFPCR	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  __IO uint32_t VVFPCR;         \/*!< DSI Host Video VFP Configuration Register,                 Address offset: 0x5C       *\/$/;"	m	struct:__anon20
-VVSACCR	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  __IO uint32_t VVSACCR;        \/*!< DSI Host Video VSA Current Configuration Register,         Address offset: 0x154      *\/ $/;"	m	struct:__anon20
+VVSACCR	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  __IO uint32_t VVSACCR;        \/*!< DSI Host Video VSA Current Configuration Register,         Address offset: 0x154      *\/$/;"	m	struct:__anon20
 VVSACR	stm_spl/CMSIS/ST/inc/stm32f4xx.h	/^  __IO uint32_t VVSACR;         \/*!< DSI Host Video VSA Configuration Register,                 Address offset: 0x54       *\/$/;"	m	struct:__anon20
 VerticalActive	stm_spl/STM32F4xx/inc/stm32f4xx_dsi.h	/^  uint32_t VerticalActive;               \/*!< Vertical active duration                                           *\/$/;"	m	struct:__anon239
 VerticalBackPorch	stm_spl/STM32F4xx/inc/stm32f4xx_dsi.h	/^  uint32_t VerticalBackPorch;            \/*!< Vertical back-porch duration                                       *\/$/;"	m	struct:__anon239
@@ -18618,14 +18628,12 @@ clip_q31_to_q15	stm_spl/CMSIS/inc/arm_math.h	/^  static __INLINE q15_t clip_q31_
 clip_q31_to_q7	stm_spl/CMSIS/inc/arm_math.h	/^  static __INLINE q7_t clip_q31_to_q7($/;"	f
 clip_q63_to_q15	stm_spl/CMSIS/inc/arm_math.h	/^  static __INLINE q15_t clip_q63_to_q15($/;"	f
 clip_q63_to_q31	stm_spl/CMSIS/inc/arm_math.h	/^  static __INLINE q31_t clip_q63_to_q31($/;"	f
-configure_buttons	projects/task_2_timers_basics/main.c	/^int configure_buttons(void)$/;"	f	file:
+color_led	projects/task_2_timers_basics/main.c	/^static volatile uint16_t color_led = RED;$/;"	v	file:
 configure_buttons	projects/task_3_timers_interrupts/init.c	/^void configure_buttons()$/;"	f
 configure_interrupts	projects/task_4_pwm/init.c	/^void configure_interrupts(void)$/;"	f
-configure_leds	projects/task_2_timers_basics/main.c	/^int configure_leds(void)$/;"	f	file:
 configure_leds	projects/task_3_timers_interrupts/init.c	/^void configure_leds()$/;"	f
 configure_leds	projects/task_4_pwm/init.c	/^void configure_leds(void)$/;"	f
 configure_pwm	projects/task_4_pwm/init.c	/^void configure_pwm(void)$/;"	f
-configure_timers	projects/task_2_timers_basics/main.c	/^int configure_timers(void)$/;"	f	file:
 configure_timers	projects/task_3_timers_interrupts/init.c	/^void configure_timers()$/;"	f
 configure_timers	projects/task_4_pwm/init.c	/^void configure_timers(void)$/;"	f
 ed_TypeDef	common/include/stm32f4xx_leds.h	/^typedef zb_uint16_t     ed_TypeDef;$/;"	t

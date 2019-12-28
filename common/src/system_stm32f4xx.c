@@ -56,15 +56,15 @@
   *-----------------------------------------------------------------------------
   *        APB2 Prescaler                         | 2
   *-----------------------------------------------------------------------------
-  *        HSE Frequency(Hz)                      | 25000000
+  *        HSE Frequency(Hz)                      | 8000000
   *-----------------------------------------------------------------------------
-  *        PLL_M                                  | 25
+  *        PLL_M                                  | 4
   *-----------------------------------------------------------------------------
-  *        PLL_N                                  | 288
+  *        PLL_N                                  | 84
   *-----------------------------------------------------------------------------
   *        PLL_P                                  | 2
   *-----------------------------------------------------------------------------
-  *        PLL_Q                                  | 6
+  *        PLL_Q                                  | 4
   *-----------------------------------------------------------------------------
   *        PLLI2S_N                               | NA
   *-----------------------------------------------------------------------------
@@ -153,14 +153,14 @@
 
 /************************* PLL Parameters *************************************/
 /* PLL_VCO = (HSE_VALUE or HSI_VALUE / PLL_M) * PLL_N */
-#define PLL_M      25
-#define PLL_N      288
+#define PLL_M      4
+#define PLL_N      84
 
 /* SYSCLK = PLL_VCO / PLL_P */
 #define PLL_P      2
 
 /* USB OTG FS, SDIO and RNG Clock =  PLL_VCO / PLLQ */
-#define PLL_Q      6
+#define PLL_Q      3
 
 /******************************************************************************/
 
@@ -410,8 +410,9 @@ static void SetSysClock(void)
     }
 
 #if defined (STM32F40_41xxx) || defined (STM32F427_437xx) || defined (STM32F429_439xx)
-    /* Configure Flash prefetch, Instruction cache, Data cache and wait state */
-    FLASH->ACR = FLASH_ACR_PRFTEN | FLASH_ACR_ICEN |FLASH_ACR_DCEN |FLASH_ACR_LATENCY_5WS;
+    /* Configure Flash prefetch, Instruction cache, Data cache and wait state
+     * 2WS (3CPU cycles) 60 < HCLK <= 90*/
+    FLASH->ACR = FLASH_ACR_PRFTEN | FLASH_ACR_ICEN |FLASH_ACR_DCEN |FLASH_ACR_LATENCY_2WS;
 #endif /* STM32F40_41xxx || STM32F42_43xxx */
 
 #if defined (STM32F401xx)
@@ -424,13 +425,14 @@ static void SetSysClock(void)
     RCC->CFGR |= RCC_CFGR_SW_PLL;
 
     /* Wait till the main PLL is used as system clock source */
-    while ((RCC->CFGR & (uint32_t)RCC_CFGR_SWS ) != RCC_CFGR_SWS_PLL);
+    while ((RCC->CFGR & (uint32_t)RCC_CFGR_SWS ) != RCC_CFGR_SWS_PLL)
     {
     }
   }
   else
   { /* If HSE fails to start-up, the application will have wrong clock
-         configuration. User can add here some code to deal with this error */
+          configuration. User can add here some code to deal with this error */
+     printf(" HSE fails to start-up");
   }
 
 }
