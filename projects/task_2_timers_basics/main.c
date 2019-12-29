@@ -1,106 +1,63 @@
 #include <stm32f4xx.h>
 
-#define TIM_PRESC (42000)
-#define TIM_PRD (1000)
-#define RED (GPIO_Pin_14)
+#define TIM_PRESC (42)
+#define TIM_PRD (1000000)
 #define GREEN (GPIO_Pin_12)
 #define ORANGE (GPIO_Pin_13)
+#define RED (GPIO_Pin_14)
 #define BLUE (GPIO_Pin_15)
-//#define T (1)
-//#define F (2)
 
+#define FIRST_COLOR 0
+#define LAST_COLOR 3
+#define LED_DIRECTION_CHANGED 1
 
-static volatile uint16_t color_led = RED;
+uint8_t colors = 4;
+uint16_t colors_order[] = {RED, BLUE, GREEN, ORANGE};
+uint16_t color_led = RED;
 
-//static uint8_t led_direction = F;
+uint8_t direction_led = 1;
+uint32_t on_time = 0;
+
 
 /* 1. Flash LEDs on extension board in an endless loop with 1 sec pause (order R-B-G) */
 /* 2. Each time light only one LED */
 /* 3. On user button press change LED flashing direction (G-B-R) */
 
 void SetSysClock_HSE_84(void);
-
 static int Configure_buttons(void);
-
 static int Configure_leds(void);
-
 static int Configure_timers(void);
-
-static void Next_color_LED_FORWARD(void);
-static void Next_color_LED_REVERSE(void);
-
-//static void Trigger_event_button(void);
+static void Next_color_LED(void);
 
 int main(void)
 {
-   uint32_t timer_value = 0;
-   //uint8_t button_state;
-   uint8_t flag = 2;
-
    SetSysClock_HSE_84();
    Configure_leds();
    Configure_buttons();
    Configure_timers();
 
-   //GPIO_SetBits(GPIOD, color_led);
+   GPIO_SetBits(GPIOD, color_led);
+   on_time = TIM_GetCounter(TIM2);
+
+
    while (1)
    {
-      //button_state = 0;
-      //button_state = GPIO_ReadOutputDataBit(GPIOA, GPIO_Pin_0);
-
-      /*if (button_state == 1)
+      if (on_time == TIM_GetCounter(TIM2))
       {
-         flag += 1;
+         Next_color_LED();
+      }
 
-         if(flag == 255)
-         {
-            flag = 1;
-         }
-      }*/
-
-      timer_value = TIM_GetCounter(TIM2);
-
-      if (flag % 2 == 0)
+      if (LED_DIRECTION_CHANGED == GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_0))
       {
-
-         if (timer_value == TIM_PRD - 1)
+         if (0 == direction_led)
          {
-            GPIO_ResetBits(GPIOD, color_led);
-            Next_color_LED_REVERSE();
+            direction_led = 1;
          }
-         else if (timer_value == 1 - 1)
+         else
          {
-            GPIO_SetBits(GPIOD, color_led);
+            direction_led = 0;
          }
       }
-      //else
-      /*{
-
-         if (timer_value == TIM_PRD - 1)
-         {
-            GPIO_ResetBits(GPIOD, color_led);
-            Next_color_LED_FORWARD();
-         }
-         else if (timer_value == 1 - 1)
-         {
-            GPIO_SetBits(GPIOD, color_led);
-         }
-      }*/
-
-         /*Trigger_event_button();
-
-      timer_value = TIM_GetCounter(TIM2);
-
-      if (timer_value == TIM_PRD - 1)
-      {
-         GPIO_ResetBits(GPIOD, color_led);
-         Next_color_LED_FORWARD();
-      }
-      else if (timer_value == 1 - 1)
-      {
-         GPIO_SetBits(GPIOD, color_led);
-      }*/
-
    }
 
    return 0;
@@ -229,73 +186,30 @@ static int Configure_timers(void)
    return 0;
 }
 
-static void Next_color_LED_FORWARD(void)
+static void Next_color_LED()
 {
-      switch(color_led)
-      {
-         case RED:
-            color_led = GREEN;
-            break;
+   static int i = FIRST_COLOR + 1;
 
-         case GREEN:
-            color_led = BLUE;
-            break;
-
-         case BLUE:
-            color_led = ORANGE;
-            break;
-
-         case ORANGE:
-            color_led = RED;
-            break;
-
-         default:
-            break;
-      }
-
-}
-
-static void Next_color_LED_REVERSE(void)
-{
-      switch(color_led)
-      {
-         case RED:
-            color_led = ORANGE;
-            break;
-
-         case ORANGE:
-            color_led = BLUE;
-            break;
-
-         case BLUE:
-            color_led = GREEN;
-            break;
-
-         case GREEN:
-            color_led = RED;
-            break;
-
-         default:
-            break;
-      }
-}
-
-
-/*static void Trigger_event_button(void)
-{
-   switch(led_direction)
+   GPIO_ResetBits(GPIOD, color_led);
+   if (0 == direction_led)
    {
-      case T:
-         Next_color_LED_FORWARD();
-         break;
+      if (i > LAST_COLOR)
+      {
+         i = FIRST_COLOR;
+      }
 
-      case F:
-         Next_color_LED_REVERSE();
-         break;
-
-      default:
-         break;
+      color_led = colors_order[i++];
    }
-}
-*/
+   else
+   {
+      if (i < FIRST_COLOR)
+      {
+         i = LAST_COLOR;
+      }
 
+      color_led = colors_order[i--];
+   }
+
+   GPIO_SetBits(GPIOD, color_led);
+   on_time = TIM_GetCounter(TIM2);
+}
