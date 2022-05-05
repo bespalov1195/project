@@ -23,4 +23,9 @@ lab1: spl common
 clean:
 	make -C $(SPL_PATH) clean
 	make -C $(COMMON_PATH) clean
-	make -C $(LABS_DIR)/led_test clean
+	# make -C $(LABS_DIR)/led_test clean
+	# make -C &(LABS_DIR)/task_1_gpio_basics clean
+	# make -C &(LABS_DIR)/task_2_timers_basics clean
+	# make -C &(LABS_DIR)/task_3_timers_interrupts clean
+	# make -C &(LABS_DIR)/task_4_input_capture clean
+	# make -C &(LABS_DIR)/task_4_pwm_OUT clean

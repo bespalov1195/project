@@ -1,0 +1,18 @@
+{
+    "configurations": [
+    {
+        "cwd": "${workspaceRoot}",
+        "executable": "${workspaceRoot}\\projects\\task_4_input_capture\\main.elf",
+        "name": "Debug with OpenOCD",
+        "request": "launch",
+        "type": "cortex-debug",
+        "servertype": "openocd",
+        "svdFile": "F:\\Work\\Software\\en.stm32f4_svd\\STM32F4_svd_V1.2\\STM32F407.svd",
+        "configFiles": ["F:\\Work\\Software\\OpenOCD-20211118-0.11.0\\share\\openocd\\scripts\\board\\stm32f4discovery.cfg",
+                        "F:\\Work\\Software\\OpenOCD-20211118-0.11.0\\share\\openocd\\scripts\\interface\\stlink-v1.cfg"],
+        "searchDir": [],
+        "runToEntryPoint": "main",
+        "showDevDebugOutput":"none"
+    }
+    ]
+}

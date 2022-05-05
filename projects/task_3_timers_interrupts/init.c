@@ -5,16 +5,16 @@ void configure_leds()
    GPIO_InitTypeDef leds_init_structure;
 
    /* Enable clocking for LEDS */
-   RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA, ENABLE);
+   RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOD, ENABLE);
 
    GPIO_StructInit(&leds_init_structure);
-   leds_init_structure.GPIO_Pin = GPIO_Pin_8 | GPIO_Pin_9 | GPIO_Pin_10;
+   leds_init_structure.GPIO_Pin = GPIO_Pin_12 | GPIO_Pin_13 | GPIO_Pin_14 | GPIO_Pin_15;
    leds_init_structure.GPIO_Mode = GPIO_Mode_OUT;
    leds_init_structure.GPIO_Speed = GPIO_Speed_50MHz;
    leds_init_structure.GPIO_OType = GPIO_OType_PP;
-   GPIO_Init(GPIOA, &leds_init_structure);
+   GPIO_Init(GPIOD, &leds_init_structure);
 
-   GPIO_SetBits(GPIOA, GPIO_Pin_8 | GPIO_Pin_9 | GPIO_Pin_10);
+   GPIO_SetBits(GPIOD, GPIO_Pin_12 | GPIO_Pin_13 | GPIO_Pin_14 | GPIO_Pin_15);
 }
 
 void configure_buttons()

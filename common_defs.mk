@@ -16,7 +16,8 @@ AS        := $(PREFIX)-as
 OBJCOPY   := $(PREFIX)-objcopy
 OBJDUMP   := $(PREFIX)-objdump
 GDB       := $(PREFIX)-gdb
-STFLASH    = $(shell which st-flash)
+STFLASH   ?= ST-LINK_CLI.exe
+#STFLASH    = $(shell which st-flash)
 
 ###############################################################################
 #                             Include directories                             #
@@ -87,7 +88,18 @@ MAKE_LIBRARY = $(Q)$(AR) r $@ $^
 ###############################################################################
 #                     Flashing and debugging instructions                     #
 ###############################################################################
-FLASH_BINARY = $(Q)$(STFLASH) write $?.bin 0x8000000
+#FLASH_BINARY = $(Q)$(STFLASH) write $?.bin 0x8000000 #ST-FLASH Linux
+FLASH_BINARY = $(STFLASH) -p $?.bin 0x8000000 #ST-LINK_CLI
+
+###############################################################################
+#                     Reseting MCU instructions                     	      #
+###############################################################################
+RESET_MCU = $(STFLASH) -Rst	#ST_LINK_CLI
+
+###############################################################################
+#                     Erasing memory instructions                     	      #
+###############################################################################
+MEMORY_ERASE = $(STFLASH) -ME # ST-LINK_CLI
 
 ###############################################################################
 #                                 Build rules                                 #

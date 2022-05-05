@@ -23,9 +23,9 @@ void TIM2_IRQHandler(void)
    {
       TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
 
-      GPIO_SetBits(GPIOA, GPIO_Pin_8 << leds_counter);
+      GPIO_SetBits(GPIOD, GPIO_Pin_8 << leds_counter);
       leds_counter = (3 + (leds_counter - leds_direction) % 3) % 3;
-      GPIO_ResetBits(GPIOA, GPIO_Pin_8 << leds_counter);
+      GPIO_ResetBits(GPIOD, GPIO_Pin_8 << leds_counter);
    }
 }
 

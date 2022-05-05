@@ -82,6 +82,7 @@ int main(void)
    uint8_t i = 0;
    uint8_t state;
    uint8_t flag = 1;
+   blink_mul_t freq = BLINK_MUL_FAST;
 
    while (1)
    {
@@ -105,9 +106,26 @@ int main(void)
          }
       }
 
-      blink_led(GPIOD, GPIO_Pin12 << i, BLINK_MUL_LONG);
-
-      i = (3 + (i - direction) % 3) % 3;
+      if (i == 0)
+      {
+         blink_led(GPIOD, GPIO_Pin_12, freq);
+         ++i;
+      }
+      else if (i == 1)
+      {
+         blink_led(GPIOD, GPIO_Pin_13, freq);
+         ++i;
+      }
+      else if (i == 2)
+      {
+         blink_led(GPIOD, GPIO_Pin_14, freq);
+         ++i;
+      }
+      else if (i == 3)
+      {
+         blink_led(GPIOD, GPIO_Pin_15, freq);
+         ++i;
+      }
    }
 
 }
@@ -263,4 +281,3 @@ void SetSysClock_HSI_168(void)
    }
 
 }
-

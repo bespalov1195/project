@@ -1,0 +1,26 @@
+{
+   "configurations": [
+       {
+           "name": "vscode_stm32_c_cpp_properties",
+           "compilerPath": "C:/Program Files (x86)/GNU_Arm_Embedded_Toolchain/10-2021.10/bin/arm-none-eabi-gcc",
+           "includePath": [
+                "F:/Work/Projects/stm32f4DISCOVERY/dsr_ESTC/stm_spl/STM32F4xx/inc",
+                "F:/Work/Projects/stm32f4DISCOVERY/dsr_ESTC/stm_spl/CMSIS/inc",
+                "F:/Work/Projects/stm32f4DISCOVERY/dsr_ESTC/stm_spl/CMSIS/ST/inc",
+                "F:/Work/Projects/stm32f4DISCOVERY/dsr_ESTC/common/include",
+                "F:/Work/Projects/stm32f4DISCOVERY/dsr_ESTC/projects/task_4_input_capture",
+                "F:/Work/Projects/stm32f4DISCOVERY/dsr_ESTC/projects/task_4_pwm_OUT",
+                "C:/Program Files (x86)/GNU_Arm_Embedded_Toolchain/10-2021.10/arm-none-eabi/include",
+                "C:/Program Files (x86)/GNU_Arm_Embedded_Toolchain/10-2021.10/lib/gcc/arm-none-eabi/10.3.1/include",
+                "C:/Program Files (x86)/GNU_Arm_Embedded_Toolchain/10-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed"
+           ],
+           "defines": [
+               "STM32F4DISCOVER"
+           ],
+           "cStandard": "c11",
+           "cppStandard": "c++17",
+           "intelliSenseMode": "gcc-x64"
+       }
+   ],
+   "version": 4
+}

@@ -10,7 +10,9 @@ include $(BUILD_ROOT)/common_defs.mk
 $(BINARY_NAME): $(BINARY_NAME).bin
 
 clean:
-	@rm -f $(OBJS) main.elf main.bin main.elf.map
+	@rm -f $(OBJS) main.elf main.bin main.elf.map main.d
 
 flash: $(BINARY_NAME)
 	$(FLASH_BINARY)
+	$(RESET_MCU)
+
