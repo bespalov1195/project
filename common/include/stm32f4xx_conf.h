@@ -51,6 +51,7 @@
 #include "stm32f4xx_wwdg.h"
 #include "misc.h" /* High level functions for NVIC and SysTick (add-on to CMSIS functions) */
 
+
 #if defined (STM32F429_439xx)
 #include "stm32f4xx_cryp.h"
 #include "stm32f4xx_hash.h"
