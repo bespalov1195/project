@@ -16,6 +16,8 @@
 #include <stm32f4xx_dma.h>
 #include <misc.h>
 
+// #define DEBUG
+
 #define FALSE 0
 #define TRUE !FALSE
 
@@ -24,15 +26,14 @@
 // Declarations and definitions
 //**************************************************************************************************
 
-//* Перечисляем логи *//
-
-
 void SetSysClock_HSE_84(void);
-void Configure_TIM3(void);
+void Configure_TIM5(void);
 void Configure_USART3(void);
-void Configure_DMA1_USART3(void);
+void Configure_DMA1(void);
 
 extern char res[15];
+extern int IC1Value;
+extern int IC2Value;
 
 
 #endif
