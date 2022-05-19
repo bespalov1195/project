@@ -1,79 +1,53 @@
 #include "main.h"
 
 #define DONE   1
-#define SEND   DONE
 #define IDLE   !DONE
+#define F_CLK  142000000
 
-#define F_CLK  84000000 
-// #define F_CLK  83849000
-// #define F_CLK  84003419 
-
-
-void TIM3_IRQHandler(void);
 void DMA1_Stream3_IRQHandler(void);
-// void Usart1_Send_symbol(uint8_t data);
-// void Usart1_Send_String(char *const str);
 void Reverse(char* str, int len);
 void IntToStr(float freq, float dutycycle, char *const str);
 
 volatile uint8_t USART_TX_ReadyToSend; 
-uint32_t IC1Value_int;
-float IC1Value_float;
-float DutyCycle;
-float Frequency;
-uint32_t tmp;
-float tmp1;
+double DutyCycle;
+double Frequency;
+char res[15] = {'\t','\t','\t','\t','\t','\t','\t','\t','\t','\t','\t','\t','\t','\t','\t'};
+int IC1Value = 0;
+int IC2Value = 0;
 
-char res[15] = {'\t','\t','\t','\t','\t','\t','\t','\t','\t','\t','\t','\t','\t','\t','\t'}; //Global array
 
 int main(void)
 {
-    USART_TX_ReadyToSend = DONE; 
+    USART_TX_ReadyToSend = IDLE; 
     Frequency = 0.0;
     DutyCycle = 0.0;
-    IC1Value_int = 0;
-    IC1Value_float = 0.0;
-    tmp = 0;
-    tmp1 = 0.0;
-
 
     SetSysClock_HSE_84();
     Configure_USART3(); 
-    Configure_DMA1_USART3();
-    Configure_TIM3();
+    Configure_TIM5();
+    Configure_DMA1();
+
+    TIM_Cmd(TIM5, ENABLE);
 
     while(1)
     {
-        if (!USART_TX_ReadyToSend)
+        for (uint32_t i = 0 ; i < 0x4FFFFF; i++){} 
+
+        if (IC1Value != 0)
         {
-            IC1Value_float = (float) TIM_GetCapture1(TIM3);
-            IC1Value_int = (int) IC1Value_float;
-            tmp1 = (float) TIM_GetCapture1(TIM3);
-            
-            if (IC1Value_int != 0)
-            {
-                tmp = TIM_GetCapture2(TIM3);
-
-                DutyCycle = (float) ((TIM_GetCapture2(TIM3)) * 100) / (IC1Value_int);
-            
-                Frequency = (float) (F_CLK) / (IC1Value_int);
-                
-            }
-            else
-            {
-                DutyCycle = 0;
-                Frequency = 0;
-            }
-
-            IntToStr(Frequency, DutyCycle, res);
-            DMA_Cmd(DMA1_Stream3, ENABLE);
-            //Usart1_Send_String(res);
-            while(!USART_TX_ReadyToSend) {};
-
-            TIM_ITConfig(TIM3, TIM_IT_CC1, ENABLE);
+            DutyCycle = (float) ((IC2Value)* 100) / (IC1Value);
+            Frequency = 142000000.0 / (IC1Value+1);
+        }
+        else
+        {
+            DutyCycle = 0;
+            Frequency = 0;
         }
 
-        for (uint32_t i = 0 ; i < 0xFFFFF; i++);
+        IntToStr(Frequency, DutyCycle, res);
+        DMA_Cmd(DMA1_Stream3, ENABLE);
+        while(!USART_TX_ReadyToSend) {};
+        USART_TX_ReadyToSend = IDLE;
     }
 
     return 0;
@@ -81,21 +55,8 @@ int main(void)
 
 
 //**************************************************************************************************
-// Procedure TIM_IRQHandler()
+// Procedure DMA1_Stream3_IRQHandler()
 //**************************************************************************************************
-void TIM3_IRQHandler(void)
-{
-	if (TIM_GetITStatus(TIM3, TIM_IT_CC1) == SET)
-    {
-        TIM_ClearITPendingBit(TIM3, TIM_IT_CC1);
-
-        TIM_ITConfig(TIM3, TIM_IT_CC1, DISABLE);
-
-        USART_TX_ReadyToSend = IDLE;
-
-    }
-}
-
 void DMA1_Stream3_IRQHandler(void)
 {
     if (DMA_GetITStatus(DMA1_Stream3, DMA_IT_TCIF3) == SET)
@@ -105,29 +66,6 @@ void DMA1_Stream3_IRQHandler(void)
         USART_TX_ReadyToSend = DONE;
     }
 }
-
-// void Usart1_Send_symbol(uint8_t data) 
-// {
-//     while(!(USART3->SR & USART_SR_TC)); //Status register transmit complate
-//     USART3->DR = data; //Data register
-// }
-
-
-// void Usart1_Send_String(char *const str) 
-// {
-//     uint8_t i = 0;
-
-//     while(str[i]) 
-//     {
-//         Usart1_Send_symbol(str[i]);
-//         i++;
-//     }
-
-//     Usart1_Send_symbol('\n');
-//     Usart1_Send_symbol('\r');
-
-//     USART_TX_ReadyToSend = IDLE; 
-// }
 
 
 void Reverse(char *const str, int len)
@@ -154,9 +92,6 @@ void IntToStr(float freq, float dutycycle,  char *const str)
 
     if (freq - 0.49 > (float) locFreq)
         locFreq ++;
-    
-    // if (1/locFreq * ;
-
     
     if (dutycycle - 0.49 > (float) locDutyCycle)
         locDutyCycle ++;
