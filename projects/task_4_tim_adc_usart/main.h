@@ -16,9 +16,10 @@
 #include <stm32f4xx_dma.h>
 #include <misc.h>
 
+// #define DEBUG
+
 #define FALSE 0
 #define TRUE !FALSE
-#define DEBUG
 #define SIZE 6
 
 

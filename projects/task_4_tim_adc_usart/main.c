@@ -3,15 +3,17 @@
 //**************************************************************************************************
 
 #include "main.h"
-#define UREF 3000 //опорное напряжение 3V
-#define TWELVE_BIT 4096//максимальное значение для 12bit: 2^12 = 4096
-#define DONE   1
-#define IDLE   !DONE
+
+
+#define UREF        3000    //Vref 3V
+#define TWELVE_BIT  4096    //12bit: 2^12 = 4096
+#define DONE        1
+#define IDLE        !DONE
+
 
 //**************************************************************************************************
 // Declarations and definitions
 //**************************************************************************************************
-
 void DMA1_Stream6_IRQHandler(void);
 void DMA2_Stream0_IRQHandler(void);
 
@@ -20,13 +22,15 @@ void DMA2_Stream0_IRQHandler(void);
 // Global variable
 //**************************************************************************************************
 char res[SIZE];
+uint16_t resADC1;
 
 volatile uint8_t USART_TX_ReadyToSend; 
 volatile uint8_t ADC_Was_Measured; 
+
 uint16_t voltageADC1;
-uint16_t resADC1;
-volatile uint16_t meanADC1;
+uint16_t meanADC1;
 uint8_t gCounter;
+
 
 //**************************************************************************************************
 // Function main()     
@@ -48,12 +52,10 @@ int main(void)
 
 	while (1)
 	{
-        // for (uint32_t i = 0 ; i < 0xFFFF; i++){} 
-
         if (ADC_Was_Measured)
         {
 
-            voltageADC1 = (UREF * meanADC1) / TWELVE_BIT; //получили преобразованное значение по формуле в mV : (Data_ADC = (Uref * DOR)/ 4096)
+            voltageADC1 = (UREF * meanADC1) / TWELVE_BIT; //mV : (Data_ADC = (Uref * DOR)/ 4096)
 
             meanADC1 = 0;
 
@@ -105,7 +107,7 @@ int main(void)
 // Procedure DMA2_Stream0_IRQHandler()     
 //**************************************************************************************************
 
-//* Обработчик прерывания DMA2 *//
+//* IRQ Handler DMA2 *//
 void DMA2_Stream0_IRQHandler(void)
 {
     if (DMA_GetITStatus(DMA2_Stream0, DMA_IT_TCIF0) == SET)
@@ -132,7 +134,7 @@ void DMA2_Stream0_IRQHandler(void)
 // Procedure DMA1_Stream6_IRQHandler()     
 //**************************************************************************************************
 
-//* Обработчик прерывания DMA1 *//
+//* IRQ Handler DMA1 *//
 void DMA1_Stream6_IRQHandler(void)
 {
     if (DMA_GetITStatus(DMA1_Stream6, DMA_IT_TCIF6) == SET)
