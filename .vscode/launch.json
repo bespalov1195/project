@@ -2,7 +2,7 @@
     "configurations": [
     {
         "cwd": "${workspaceRoot}",
-        "executable": "${workspaceRoot}\\projects\\task_4_pwm_input\\main.elf",
+        "executable": "${workspaceRoot}\\projects\\task_4_tim_adc_usart\\main.elf",
         "name": "Debug with OpenOCD",
         "request": "launch",
         "type": "cortex-debug",
