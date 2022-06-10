@@ -1,6 +1,6 @@
-# ESTC OS-les build system
+#OS-les build system
 
-Build system for ESTC OS-less tasks
+Build system for OS-less tasks
 
 ## Prerequisites
 * [arm-none-eabi](https://developer.arm.com/open-source/gnu-toolchain/gnu-rm/downloads) compiler
